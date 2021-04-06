@@ -1,0 +1,279 @@
+*, *:before, *:after{
+  box-sizing: border-box;
+ }
+body {font-family: Verdana, sans-serif; margin:0}
+.slides {
+  display: none
+}
+
+/* Slider */
+img {  
+    width: 100%;
+    height: 490px;
+}
+/* --------------Menu-------------------- */
+#container{
+  display: flex;
+  justify-content: center;
+  /* Bajar el contenido para que no se amontone */
+  background-color: #303335;
+  flex-wrap: wrap;
+}
+
+#container>.logo{
+  flex-grow: 0;
+}
+
+
+
+.logo{
+  display: flex;
+  align-items: center;
+}
+
+.logo>img{
+ width: 10em;
+ height: 6em;
+  margin: 0.1em;
+  border-radius: .5em;
+}
+
+#container>#menu{
+  flex-grow: 2;
+}
+
+#menu{
+  
+  display: flex;
+  flex-wrap: wrap;
+  
+}
+
+#menu>ul{
+  list-style: none;
+  border-right: 1px solid #f2f2f2;
+  flex-grow: 1;
+  display: flex;
+  margin: 0;
+
+}
+
+#menu>ul>li{
+  align-self: center;
+}
+
+#menu>ul>li>a{
+  color: #f8eeee;
+  text-decoration: none;
+  font-size: 1.2em;
+  padding: 1em;
+  height: .5em;
+  font-weight: 900;
+}
+
+/*Hover Menu */
+#menu>ul:hover{
+  background-color: #fab915;
+}
+
+
+
+/* ----------------------------Slideshow container ------------------------------------------------------*/
+.slideshow-container {
+  position: relative;
+  margin: auto;
+  width: 100%;
+  height: 490px;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 200px;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+#dots{
+  text-align: center;
+  margin-top: .5em;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+/* -----Articulos | Inicio    ------------------- */
+.newblogs{
+  display: flex;
+  flex-flow: row;
+}
+
+.content{
+  flex-grow: 3;
+  display: flex;
+  justify-content: center;
+}
+
+.subheader{
+  margin: 1em;
+}
+.article-item{
+  border: 5px double black;
+  margin-bottom: 1em;
+  display: flex;
+  flex-wrap: w;
+  justify-content: center;
+  padding: 1.5em;
+  margin: 1em;
+}
+
+.image-wrap>img{
+  width: 15em;
+  height: 12em;
+}
+
+.description_article{
+  display: flex;
+  flex-direction: column;
+  margin-left: 1em;
+}
+
+.date{
+  background-color: #303335;
+  width: 12em;
+  text-align: center;
+  color: #f2f2f2;
+  border-radius: 2em;
+  padding: 5px;
+}
+
+.description_article>a{
+  background-color: #fab915;
+  margin-top: 1em;
+  width: 7em;
+  padding: 10px;
+  text-decoration: none;
+  color: #303335;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+
+
+
+#sidebar{
+  flex-grow: 1;
+margin-left: 1em;
+}
+
+
+/* Footer------------------------------- */
+footer{
+  padding-top: 1em;
+  background-color: #303335;
+}
+.social-media{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.social-media>span{
+  color: #f2f2f2;
+  padding: 12px;
+}
+.social-media>a>img{
+  width: 3em;
+  height: 3em;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}

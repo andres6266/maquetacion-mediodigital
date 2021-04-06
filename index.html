@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Medio</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <header id="header">
+        <div id="container">
+
+            <!-- Logo -->
+            <div class="logo">
+                <img src="https://fundaciongabo.org/sites/default/files/imagenportada/2017-11/periodista-estatus-profesional-periodismo.jpg"
+                    alt="">
+
+            </div>
+            <!-- Menu -->
+            <nav id="menu">
+                <ul>
+                    <li><a href="">Inicio</a> </li>
+                </ul>
+                <ul>
+                    <li><a href="">Quienes somos</a></li>
+                </ul>
+                <ul>
+                    <li><a href="">Pauta con nosotros</a></li>
+                </ul>
+                <ul>
+                    <li><a href="">Contactanos</a> </li>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+
+    <div class="slideshow-container">
+
+        <div class="sliderSection fade">
+            <div class="numbertext">1 / 3</div>
+            <img src="https://la.network/wp-content/uploads/2018/07/BOSQUE-HERMOSO.jpg" class="img">
+            <div class="text">Caption Text</div>
+        </div>
+
+        <div class="sliderSection fade">
+            <div class="numbertext">2 / 3</div>
+            <img src="https://astelus.com/wp-content/viajes/Lago-Moraine-Parque-Nacional-Banff-Alberta-Canada.jpg"
+                class="img">
+            <div class="text">Caption Two</div>
+        </div>
+
+        <div class="sliderSection fade">
+            <div class="numbertext">3 / 3</div>
+            <img src="https://kaikucaffelatte.com/blog/wp-content/uploads/2020/03/shutterstock_510679489-scaled.jpg"
+                class="img">
+            <div class="text">Caption Three</div>
+        </div>
+
+        <a class="prev">&#10094;</a>
+        <a class="next">&#10095;</a>
+
+    </div>
+
+    <div id="dots">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </div>
+
+    <div class="newblogs">
+        <section class="content">
+
+            <script type="text/javascript">
+                window.addEventListener("load", function () {
+                    var template = document.getElementById("article-template");
+                    var articles = document.getElementById("articles");
+
+                    for (var i = 1; i <= 5; i++) {
+                        var clonado = template.cloneNode(true);
+                        clonado.removeAttribute("id");
+
+                        var h2 = clonado.getElementsByTagName("h2")[0];
+                        h2.innerHTML = h2.textContent + ' ' + i;
+
+                        articles.appendChild(clonado);
+                    }
+
+                });
+            </script>
+
+            <!--Listado articulos-->
+            <div id="articles" class="articles">
+                <h2 class="subheader">Últimos artículos</h2>
+                <article class="article-item" id="article-template">
+                    <div class="image-wrap">
+                        <img src="https://unhabitatmejor.leroymerlin.es/sites/default/files/styles/header_category/public/2018-10/4%20paisaje%20macedonia.jpg?itok=AELknmF8"
+                            alt="Paisaje" />
+                    </div>
+                    <div class="description_article">
+
+                        <h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil, sdadas dfesa </h2>
+                        <span class="date">
+                            Hace 5 minutos
+                        </span>
+                        <a href="#">Leer más</a>
+                    </div>
+
+                    <div class="clearfix"></div>
+                </article>
+
+                <!--AÑADIR ARTICULOS VIA JS-->
+
+            </div>
+
+        </section>
+
+        <!-- <aside id="sidebar">
+            <div id="search" class="sidebar-item">
+                <h3>Buscador</h3>
+                <p>Encuentra el artículo que buscas</p>
+                <form>
+                    <input type="text" name="search" />
+                    <input type="submit" name="submit" value="Buscar" class="btn" />
+                </form>
+            </div>
+        </aside> -->
+    </div>
+    <footer>
+        <div class="social-media">
+            <span>
+                &copy; Andres Avila
+            </span>
+            <a href="#">
+                <img src="https://i.pinimg.com/originals/3b/21/c7/3b21c7efd2ba9c119fb8d361acacc31d.png">
+            </a>
+            <a href="#">
+                <img
+                    src="https://images.vexels.com/media/users/3/137419/isolated/preview/b1a3fab214230557053ed1c4bf17b46c-logotipo-del-icono-de-twitter-by-vexels.png">
+            </a>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
