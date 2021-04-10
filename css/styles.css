@@ -1,3 +1,4 @@
+
 *, *:before, *:after{
   box-sizing: border-box;
  }
@@ -7,7 +8,7 @@ body {font-family: Verdana, sans-serif; margin:0}
 }
 
 /* Slider */
-img {  
+.img {  
     width: 100%;
     height: 490px;
 }
@@ -24,16 +25,14 @@ img {
   flex-grow: 0;
 }
 
-
-
 .logo{
   display: flex;
   align-items: center;
 }
 
 .logo>img{
- width: 10em;
- height: 6em;
+  width: 10em;
+  height: 6em;
   margin: 0.1em;
   border-radius: .5em;
 }
@@ -65,26 +64,53 @@ img {
 #menu>ul>li>a{
   color: #f8eeee;
   text-decoration: none;
-  font-size: 1.2em;
   padding: 1em;
   height: .5em;
   font-weight: 900;
 }
+
+
+.right-menu{
+  display: flex;
+  flex-direction: column;
+  width: 13em;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffb700;
+}
+
+.right-menu>a{
+  color: #303335;
+  text-decoration: none;
+  text-align: center;
+  width: 100%;
+  flex-grow: 1;
+  padding: 1em;
+  font-weight: 600;
+
+}
+
+
+.right-menu>a:hover{
+  background-color: #f2f2f2;
+  color: #303335;
+  cursor: pointer;
+}
+
 
 /*Hover Menu */
 #menu>ul:hover{
   background-color: #fab915;
 }
 
-
-
 /* ----------------------------Slideshow container ------------------------------------------------------*/
 .slideshow-container {
   position: relative;
-  margin: auto;
   width: 100%;
   height: 490px;
 }
+
+
 
 /* Next & previous buttons */
 .prev, .next {
@@ -113,15 +139,34 @@ img {
   background-color: rgba(0,0,0,0.8);
 }
 
+
 /* Caption text */
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
+.info-slider {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(3, 26, 30, 0.3);
+  background: rgba(3, 26, 30, 0.3);
+  font-size: 28px;
   padding: 8px 12px;
   position: absolute;
-  bottom: 8px;
-  width: 200px;
-  text-align: center;
+  bottom: 7.5em;
+  left: 3em;
+  width: 87%;
+  right: 1.2em;
+  text-align: left;
+  color: rgba(245, 249, 250, 0.918);
+}
+
+.btn-access-slider{
+  width: 6em;
+  background-color: #ffb700;
+  padding: 1em;
+  border-radius: .4em;
+  padding: .9em;
+  font-size: .6em;
+  font-weight: 700;
+  cursor: pointer;
 }
 
 /* Number text (1/3 etc) */
@@ -132,6 +177,8 @@ img {
   position: absolute;
   top: 0;
 }
+
+
 
 #dots{
   text-align: center;
@@ -162,6 +209,62 @@ img {
   animation-duration: 1.5s;
 }
 
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+
+
+/* --------------------Seccion Buscar ------------ */
+
+#search{
+  display: flex;
+  justify-content: flex-end;
+  flex-flow: row wrap;
+  margin: .2em;
+  
+}
+
+#search>form{
+  display: flex;
+  flex-flow: row wrap;
+}
+
+#searchValue{
+  border: 1px solid #303335;
+  width: 22em;
+  height: 2em;
+  border-radius: .5em;
+}
+
+.btn-search{
+  width: 6em;
+  margin-left: .5em;
+  align-self: center;
+  border: .3em solid #f78e04;
+  border-radius: .2em;
+  background-color: #ffb700;
+  color: #f2f2f2;
+  padding: .2em;
+  font-weight: 700;
+}
+
+.btn-search:hover{
+  border: .3em solid #303335;
+  background-color: #fab915;
+  cursor: pointer;
+}
+
+
+
+
 /* -----Articulos | Inicio    ------------------- */
 .newblogs{
   display: flex;
@@ -181,13 +284,13 @@ img {
   border: 5px double black;
   margin-bottom: 1em;
   display: flex;
-  flex-wrap: w;
+  flex-wrap: nowrap;
   justify-content: center;
   padding: 1.5em;
   margin: 1em;
 }
 
-.image-wrap>img{
+.image-article>img{
   width: 15em;
   height: 12em;
 }
@@ -247,33 +350,60 @@ footer{
 
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@-webkit-keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
+/* ------------ ABOUT ------------ */
+.team-cards{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 2em;
+  justify-content: space-between;
 }
 
-@keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
+.team-container{
+  width: 25%;
+  margin: 1em;
+  border: .5em double #303335;
+  padding: 1em;
 }
 
-/* On smaller screens, decrease text size */
-@media only screen and (max-width: 300px) {
-  .prev, .next,.text {font-size: 11px}
+
+.team-user-main{
+  display: flex;
+  flex-flow: column;
+  align-items: center;
 }
+
+
+.team-user-main>img{
+  width: 6em;
+  height: 6em;
+}
+
+.team-user-information{
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.team-user-information>h4{
+  border-bottom: 1px solid #f78e04;
+  width: 100%;
+  text-align: center;
+  padding-bottom: 1em;
+}
+
+.activities{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.activities>.appointment{
+  padding: .2em;
+  margin: 1px;
+  flex-grow: 1;
+  text-align: center;
+  border-radius: .2em;
+  background-color: #f78e04;
+}
+

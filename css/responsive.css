@@ -1,0 +1,148 @@
+/* Menu */
+@media only screen and (max-width: 1084px) {
+    .right-menu{
+        width: 100%;
+        padding: 0;
+        font-size: 12px;
+        flex-direction: row;
+    }
+}
+@media only screen and (max-width: 1010px) {
+#menu{
+    flex-direction: column;
+   
+}
+
+#menu>ul{
+    border: none;
+    width: 95%;
+}
+
+#menu>ul>li>a{
+    padding: 0;
+}
+
+}
+
+/* ------------------ Slider */
+
+
+
+@media only screen and (max-width: 996px) {
+    .info-slider{
+        font-size: 16px;
+        bottom: 7em;
+        left: 4em;
+    }
+    
+    .slideshow-container {
+        
+        height: 300px;
+    }
+    
+    .img{
+        height: 300px;
+    }
+    
+    .prev, .next {
+        top: 50%;
+    }
+    
+}
+
+@media only screen and (max-width: 858px) {
+    .info-slider {
+        width: 66%;
+        left: 9em;
+    }
+}
+
+@media only screen and (max-width: 766px) {
+    .info-slider{
+        flex-direction: column;
+        left: 3em;
+        flex-direction: column;
+        left: 9em;
+        width: 64%;
+    }
+    
+    .btn-access-slider{
+        margin: 1em;
+    }
+    
+}
+
+@media only screen and (max-width: 617px) {
+    .info-slider{
+        left: 4em;
+        width: 80%;
+    }
+
+}
+
+
+@media only screen and (max-width: 606px) {
+    .info-slider {
+        left: 9em;
+        width: 54%;
+    }
+}
+
+
+@media only screen and (max-width: 558px) {
+    .info-slider {
+        left: 13em;
+        width: 31%;
+    }
+}
+
+
+@media only screen and (max-width: 557px) {
+    .info-slider {
+        left: 3em;
+        width: 75%;
+    }
+    .text-slider{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 300px) {
+    .prev, .next{font-size: 11px}
+}
+
+
+/* ---------------- Articulos pagina de inicio */
+@media only screen and (max-width: 725px) {
+    .content{
+        flex-grow: 1;
+    }
+    .article-item{
+        flex-wrap: wrap;
+    }
+    #search{
+        justify-content: center;
+    }
+}
+
+@media only screen and (max-width: 387px) {
+    #search>form{
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    #searchValue{
+        margin-bottom: 1em;
+    }
+    
+}
+
+/* ---------------- ABOUT */
+@media only screen and (max-width: 862px) {
+    .team-container{
+        width: 100%;
+    }   
+}
+
+
+
