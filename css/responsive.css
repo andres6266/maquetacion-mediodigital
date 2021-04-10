@@ -9,6 +9,7 @@
 }
 @media only screen and (max-width: 1010px) {
 #menu{
+    text-align: center;
     flex-direction: column;
    
 }
