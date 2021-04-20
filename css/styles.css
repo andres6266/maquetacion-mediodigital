@@ -13,96 +13,34 @@ body {font-family: Verdana, sans-serif; margin:0}
     height: 490px;
 }
 /* --------------Menu-------------------- */
-#container{
-  display: flex;
-  justify-content: center;
-  /* Bajar el contenido para que no se amontone */
-  background-color: #303335;
-  flex-wrap: wrap;
+.topnav {
+  overflow: hidden;
+  background-color: #333;
 }
 
-#container>.logo{
-  flex-grow: 0;
-}
-
-.logo{
-  display: flex;
-  align-items: center;
-}
-
-.logo>img{
-  width: 10em;
-  height: 6em;
-  margin: 0.1em;
-  border-radius: .5em;
-}
-
-#container>#menu{
-  flex-grow: 2;
-}
-
-#menu{
-  
-  display: flex;
-  flex-wrap: wrap;
-  
-}
-
-#menu>ul{
-  list-style: none;
-  border-right: 1px solid #f2f2f2;
-  flex-grow: 1;
-  display: flex;
-  margin: 0;
-
-}
-
-#menu>ul>li{
-  align-self: center;
-}
-
-#menu>ul>li>a{
-  color: #f8eeee;
-  text-decoration: none;
-  padding: 1em;
-  height: .5em;
-  font-weight: 900;
-}
-
-
-.right-menu{
-  display: flex;
-  flex-direction: column;
-  width: 13em;
-  justify-content: center;
-  align-items: center;
-  background-color: #ffb700;
-}
-
-.right-menu>a{
-  color: #303335;
-  text-decoration: none;
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
   text-align: center;
-  width: 100%;
-  flex-grow: 1;
-  padding: 1em;
-  font-weight: 600;
-
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
 }
 
-
-.right-menu>a:hover{
-  background-color: #f2f2f2;
-  color: #303335;
-  cursor: pointer;
+.active {
+  background-color: #4CAF50;
+  color: white;
 }
 
-
-/*Hover Menu */
-#menu>ul:hover{
-  background-color: #fab915;
+.topnav .icon {
+  display: none;
 }
 
+.topnav a:hover, .dropdown:hover .dropbtn {
+  background-color: #555;
+  color: white;
+}
 /* ----------------------------Slideshow container ------------------------------------------------------*/
 .slideshow-container {
   position: relative;
@@ -407,3 +345,44 @@ footer{
   background-color: #f78e04;
 }
 
+/* -------------------- NavTabs --------------- */
+/* Style the tab */
+.sponsors-tabs{
+  min-height: 500px;
+}
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  display: flex;
+  justify-content: space-around;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  /* Oculta el contenido */
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}

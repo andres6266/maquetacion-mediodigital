@@ -1,5 +1,15 @@
 'use strict'
 
+//Menu Responsive
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+
 //Variables generales
 
 //Valor inicial del indice del slider
@@ -111,3 +121,22 @@ function automaticSlides() {
   conf_time = setInterval((automaticSlides), time_slider); // Change image every 8 seconds
 }
 
+
+/* ----------------------Nav tabs de Sponsor */
+var tablinks = document.querySelectorAll(".tablinks")
+
+var tabcontent = document.querySelectorAll(".tabcontent")
+
+
+for (let i = 0; i < tablinks.length; i++) {
+    tablinks[i].addEventListener("click", function () {
+        
+        for (let i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+          }
+
+        document.getElementById(tabcontent[i].id).style.display = "block"
+        
+        
+    })
+}
