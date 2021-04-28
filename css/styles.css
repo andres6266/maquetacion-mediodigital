@@ -1,11 +1,279 @@
+/* Basic styling */
+:root{
+  --softOrange:#ffae00;
+  --gray: #303335;
+  --weightDefault:700;
+}
+
+
 
 *, *:before, *:after{
   box-sizing: border-box;
- }
+}
 body {font-family: Verdana, sans-serif; margin:0}
 .slides {
   display: none
 }
+/* -------------  Menu  ----------------------- */
+
+/* Menu */
+nav {
+  background: var(--gray);
+}
+a {
+  color: white;
+  text-decoration: none;
+}
+
+.logo {
+  margin-left: 1em;
+  font-weight: var(--weightDefault);
+  font-size: 20px;
+  padding: 7.5px 10px 7.5px 0;
+}
+.item {
+  padding: 1.3em;
+}
+.item.button {
+  padding: 9px 5px;
+}
+
+/* Mobile menu */
+.menu {
+  background: var(--gray);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu>.profileSession{
+  display: flex;
+  align-self: center;
+  border-bottom: 1px solid #ccc;
+}
+
+.menu.subitem a {
+  padding: 15px;
+}
+.toggle {
+  order: 0;
+  font-weight: var(--weightDefault);
+  font-size: 20px;
+  color: #ccc;
+  
+  margin-right: 1em;
+
+}
+
+.item {
+  order: 3;
+  width: 100%;
+  text-align: center;
+  display: none;
+  font-weight: var(--weightDefault);
+}
+
+.menu>.item{
+  font-size: 16px;
+  border-bottom: 1px solid #ccc;
+}
+
+.menu>.item:hover{
+  background-color: var(--gray);
+}
+
+.profileSession{
+order: 2;
+width: 100%;
+display: flex;
+flex-flow: column;
+}
+
+/* ------------- Link de perfil - menu */
+.linkuser{
+display: flex;
+flex-shrink: 0;
+
+}
+
+.profilepic{
+margin: 0;
+padding: 0;
+width: 1em;
+
+}
+
+.linkuser{
+display: flex;
+justify-content: center;
+}
+.profilepic{
+width: 3em;
+margin-right: .5em;
+border-radius: 2em;
+}
+.username{
+align-self: center;
+}
+
+
+.active .item {
+  display: block;
+}
+
+/* Submenu up from mobile screens */
+.submenu {
+  display: none;
+}
+.submenu-active .submenu {
+  display: flex;
+  flex-flow: column;
+  margin-top: 1em;
+  z-index: 100;
+}
+.has-submenu {
+  font-weight: var(--weightDefault);
+  font-size: 14px;
+}
+.has-submenu > a::after {
+  font-family: "Font Awesome 5 Free";
+  font-weight: var(--weightDefault);
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 900;
+  content: "\1F87B";
+  align-self: center;
+  padding-left: 5px;
+}
+.subitem {
+  padding: 1em;
+  background-color: var(--gray);
+  border-bottom: 1px solid #ccc;
+}
+
+
+.submenu-active {
+  background-color: var(--softOrange);
+  border-radius: 3px;
+}
+
+.item:not(.button):hover,
+.item a:hover,
+.profileSession .item:hover
+{
+   background-color: var(--softOrange);
+}
+
+
+.button.secondary {
+  /* divider between buttons and menu links */
+  border-bottom: 1px var(--gray) solid;
+}
+
+/* Desktop menu */
+@media all and (min-width: 960px) {
+  nav>.menu{
+
+    background-color: var(--gray);
+  }
+  .menu {
+    flex-wrap: nowrap;
+    background: none;
+  }
+
+  .logo{
+    width: 40em;
+    text-align: center;
+    align-self: center;
+  }
+ 
+  .item {
+    position: relative;
+    display: block;
+    width: auto;
+    font-size: 16px;
+    order: 1;
+  }
+
+  .item.social {
+    padding: 1.3em 2em;
+}
+
+  .menu>.profileSession{
+    border-bottom: none;
+  }
+  
+  .profileSession{
+    flex-grow: 1;
+    flex-flow: row;
+    order: 2;
+    justify-content: flex-end;
+  }
+
+  /* ------------- Link de perfil - menu */
+  .submenu-profile{
+    margin: 0;
+    padding: 15px;
+  }
+  .linkuser{
+    display: flex;
+    flex-shrink: 0;
+    
+  }
+
+  .username{
+    align-self: center;
+    margin-left: .5em;
+  }
+
+  .profilepic{
+  width: 1.9em;
+  border-radius: 1em;
+  }
+
+  .submenu-active .submenu {
+    display: flex;
+    position: absolute;
+    left: 0;
+    top: 2.8em;
+    background: var(--gray);
+    width: 100%;
+  }
+
+
+  .item:not(.button):hover,
+.item a:hover,
+.profileSession .item:hover
+ {
+  cursor: pointer;
+  background-color: var(--softOrange);
+
+}
+  
+  .subitem{
+    display: flex;
+    width: 100%;
+    border: 1px solid white;
+    margin: 0;
+    justify-content: center;
+  }
+
+  
+  .toggle {
+    display: none;
+  }
+  .submenu-active {
+    border-radius: 0;
+  }
+
+  .menu>.item{
+    border: none;
+  flex-shrink: 0;
+  }
+}
+
+/* -------------  Fin Menu  ----------------------- */
 
 /* Slider */
 .img {  
@@ -16,6 +284,10 @@ body {font-family: Verdana, sans-serif; margin:0}
 .topnav {
   overflow: hidden;
   background-color: #333;
+}
+
+.topnav>.login, .topnav>.register, .topnav>.profile{
+  float: right;
 }
 
 .topnav a {
@@ -37,10 +309,60 @@ body {font-family: Verdana, sans-serif; margin:0}
   display: none;
 }
 
-.topnav a:hover, .dropdown:hover .dropbtn {
+.topnav a:hover, .dropdown:hover .profile {
   background-color: #555;
   color: white;
 }
+
+/* ------------------- Dropdown Menu ------------- */
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .profile {
+  cursor: pointer;
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.dropdown:hover .profile, .profile:focus {
+  background-color: red;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.show {
+  display: block;
+}
+
+
 /* ----------------------------Slideshow container ------------------------------------------------------*/
 .slideshow-container {
   position: relative;

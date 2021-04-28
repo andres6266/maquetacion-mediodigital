@@ -1,18 +1,63 @@
 'use strict'
 
-//Menu Responsive
-function myFunction() {
-  var x = document.getElementById("myTopnav");
-  if (x.className === "topnav") {
-    x.className += " responsive";
+
+
+/* ------------------------------------------------*/
+/* ----- Menu Principal------------------------*/
+/* ------------------------------------------------*/
+const toggle = document.querySelector(".toggle");
+const menu = document.querySelector(".menu");
+const items = document.querySelectorAll(".item");
+
+/* Menu desplegable en el caso de que la resolucion se de moviles */
+function toggleMenu() {
+  if (menu.classList.contains("active")) {
+    menu.classList.remove("active");
+    toggle.innerHTML = "&#9776;";
   } else {
-    x.className = "topnav";
+    menu.classList.add("active");
+    toggle.innerHTML = "&#9776;";
   }
 }
 
-//Variables generales
+/* Activa el submenu */
+function toggleItem() {
+  if (this.classList.contains("submenu-active")) {
+    this.classList.remove("submenu-active");
+  } else if (menu.querySelector(".submenu-active")) {
+    menu.querySelector(".submenu-active").classList.remove("submenu-active");
+    this.classList.add("submenu-active");
+  } else {
+    this.classList.add("submenu-active");
+  }
+}
 
-//Valor inicial del indice del slider
+/* Cierra el submenu */
+function closeSubmenu(e) {
+  let isClickInside = menu.contains(e.target);
+
+  if (!isClickInside && menu.querySelector(".submenu-active")) {
+    menu.querySelector(".submenu-active").classList.remove("submenu-active");
+  }
+}
+/* Event Listeners */
+toggle.addEventListener("click", toggleMenu, false);
+for (let item of items) {
+  if (item.querySelector(".submenu")) {
+    item.addEventListener("click", toggleItem, false);
+  }
+  item.addEventListener("keypress", toggleItem, false);
+}
+document.addEventListener("click", closeSubmenu, false);
+
+
+
+/* ------------------------------------------------*/
+/* ----- Slider pagina de Inicio -------------------*/
+/* ------------------------------------------------*/
+
+//Variables generales Slider
+
 var slideIndex = 0;
 var slides = document.getElementsByClassName("sliderSection");
 //Configurar intervalos de tiempo
@@ -57,8 +102,12 @@ for (let i = 0; i < dot.length; i++) {
 var prev = document.querySelector('.prev')
 var next = document.querySelector('.next')
 
-prev.addEventListener('click', previousSlide)
-next.addEventListener('click', nextSlide)
+try {
+  prev.addEventListener('click', previousSlide)
+  next.addEventListener('click', nextSlide)
+} catch (error) {
+  
+}
 
 function previousSlide() {
 
@@ -92,7 +141,8 @@ function nextSlide() {
 
 //-----------------------------------------------------
 function showSlides(n) {
-
+try {
+  
   var i;
   //Conseguir elemento con la clase dot
   var dots = document.getElementsByClassName("dot");
@@ -108,6 +158,8 @@ function showSlides(n) {
   }
   slides[slideIndex - 1].style.display = "block";
   dots[slideIndex - 1].className += " active";
+} catch (error) {
+}
 
 }
 
@@ -122,7 +174,11 @@ function automaticSlides() {
 }
 
 
-/* ----------------------Nav tabs de Sponsor */
+/* ------------------------------------------------*/
+/* ----- Nav tabs de sponsors ---------------------*/
+/* ------------------------------------------------*/
+
+'use strict'
 var tablinks = document.querySelectorAll(".tablinks")
 
 var tabcontent = document.querySelectorAll(".tabcontent")
@@ -140,3 +196,5 @@ for (let i = 0; i < tablinks.length; i++) {
         
     })
 }
+
+
