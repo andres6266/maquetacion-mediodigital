@@ -138,3 +138,73 @@
 
 
 
+
+/* -------------------- Contact */
+@media only screen and (max-width: 1246px) {
+    .container {
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+        
+    }
+      
+   
+}
+
+
+@media only screen and (max-width: 590px) {
+
+    
+
+#searchValue {
+    width: auto;
+}
+    .form-users{
+        padding: 2em;
+}
+
+.form-users>h2{
+    font-size: 1em;
+    justify-content: center;
+}
+.label-title-form{
+    
+    align-self: center;
+}
+
+
+.field-form, .form-submit{
+    align-self: center;
+    width: 16em;
+}
+
+
+
+.contact-link>img {
+    width: 2.5em;
+    height: 2.5em;
+}
+
+
+
+.contact-link{
+    margin: 1em;
+  }
+}
+
+@media only screen and (max-width: 312px) {
+    
+.article-item{
+    padding: .5em;
+}
+.image-article>img {
+    display: none;
+}
+    
+    .form-users{
+        padding: 1em;
+    }
+}
+
+

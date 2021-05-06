@@ -46,14 +46,29 @@
         </nav>
 
     </header>
-    <div id="search">
-        <form>
-            <input type="text" name="search" />
-            <input type="submit" name="submit" value="Buscar" class="btn-search" />
-        </form>
-    </div>
-    <main role="main">
 
+    <main role="main">
+        <div class="container">
+            <form action="#" method="post" class="form-users">
+                
+                <label for="name" class="label-title-form">Nombre:</label>
+                <input type="text" placeholder="nombre" class="field-form" required>
+
+                <label for="surname" class="label-title-form">Apellido:</label>
+                <input type="text" class="field-form" placeholder="apellido" required>
+
+                <label class="label-title-form" for="email">Email:</label>
+                <input type="email" class="field-form" placeholder="Su correo electronico" required>
+
+                <label class="label-title-form" for="password">Contrasena:</label>
+                <input type="password" class="field-form" placeholder="Su contrasena" required>
+
+                <label class="label-title-form" for="password">Confirmar contrasena:</label>
+                <input type="password" class="field-form" placeholder="Vuelva a escribir su contrasena" required>
+
+                <input type="submit" value="Registrarse" class="login-submit">
+            </form>
+        </div>
     </main>
 
     <footer>

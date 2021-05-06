@@ -106,7 +106,7 @@ try {
   prev.addEventListener('click', previousSlide)
   next.addEventListener('click', nextSlide)
 } catch (error) {
-  
+
 }
 
 function previousSlide() {
@@ -137,35 +137,35 @@ function nextSlide() {
 
 
 //-------------------------------------------------------
-
+//Slides
 
 //-----------------------------------------------------
 function showSlides(n) {
-try {
-  
-  var i;
-  //Conseguir elemento con la clase dot
-  var dots = document.getElementsByClassName("dot");
+  try {
 
-  if (n > slides.length) { slideIndex = 1 }
-  if (n < 1) { slideIndex = slides.length }
+    var i;
+    //Conseguir elemento con la clase dot
+    var dots = document.getElementsByClassName("dot");
 
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
+    if (n > slides.length) { slideIndex = 1 }
+    if (n < 1) { slideIndex = slides.length }
+
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].className += " active";
+  } catch (error) {
   }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex - 1].style.display = "block";
-  dots[slideIndex - 1].className += " active";
-} catch (error) {
-}
 
 }
 
 
 function automaticSlides() {
-  
+
   if (slideIndex > slides.length) { slideIndex = 1 }
   slideIndex++;
   showSlides(slideIndex)
@@ -185,16 +185,70 @@ var tabcontent = document.querySelectorAll(".tabcontent")
 
 
 for (let i = 0; i < tablinks.length; i++) {
-    tablinks[i].addEventListener("click", function () {
-        
-        for (let i = 0; i < tabcontent.length; i++) {
-            tabcontent[i].style.display = "none";
-          }
+  tablinks[i].addEventListener("click", function () {
 
-        document.getElementById(tabcontent[i].id).style.display = "block"
-        
-        
-    })
+    //DEfinicion de mostrar contenido y color de fondo por defecto
+    for (let i = 0; i < tabcontent.length; i++) {
+      tablinks[i].style.background = "#ffae00";
+      tabcontent[i].style.display = "none";
+      tablinks[i].style.color = "#303335";
+    }
+
+    tablinks[i].style.color = "#f2f2f2";
+    tablinks[i].style.background = "#303335";
+    document.getElementById(tabcontent[i].id).style.display = "block"
+    document.getElementById(tabcontent[i].id).style.overflow = "auto"
+
+
+  })
 }
 
 
+//------------------ Collapse Sponsors
+
+var collapSegmentInfo = document.getElementsByClassName("collapSegmentInfo");
+var contentSegment = document.querySelectorAll(".contentSegment");
+
+
+for (let indexSegment = 0; indexSegment < collapSegmentInfo.length; indexSegment++) {
+
+
+  collapSegmentInfo[indexSegment].addEventListener("click", function () {
+
+    //Insertar la clase active al elemento collapSegmentInfo
+    this.classList.toggle("active");
+
+    contentSegment[indexSegment].style.display = "block"
+
+    if (!this.classList.contains("active")) {
+      contentSegment[indexSegment].style.display = "none"
+    }
+
+
+
+
+
+
+
+    //Ocultar el contenido si se hace click fuera del elemento
+
+    document.addEventListener('click', function (event) {
+      var isClickInsideButton = collapSegmentInfo[indexSegment].contains(event.target);
+
+      var isClickInsideContent = (contentSegment[indexSegment].contains(event.target));
+
+      //Si los 2 elementos no son marcados con click y si es clickeado fuera de los elementos se realiza lo siguiente
+
+
+      if (!isClickInsideButton && !isClickInsideContent) {
+
+        contentSegment[indexSegment].style.display = "none"
+        //Remueve la clase active  
+        collapSegmentInfo[indexSegment].classList.remove("active")
+
+      }
+
+    });
+  });
+
+}

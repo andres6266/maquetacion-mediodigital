@@ -46,14 +46,18 @@
         </nav>
 
     </header>
-    <div id="search">
-        <form>
-            <input type="text" name="search" />
-            <input type="submit" name="submit" value="Buscar" class="btn-search" />
-        </form>
-    </div>
-    <main role="main">
 
+    <main role="main">
+        <div class="container">
+            <form action="#" method="post" class="form-users">
+                <label class="label-title" for="email">Email:</label>
+                <input type="text" class="field-form" placeholder="Su correo electronico" required>
+                <label class="label-title" for="password">Password:</label>
+                <input type="password" class="field-form" placeholder="Su contrasena" required>
+
+                <input type="submit" value="Iniciar sesion" class="login-submit">
+            </form>
+        </div>
     </main>
 
     <footer>
