@@ -12,49 +12,52 @@
 
 <body>
     <header id="header">
-        <div id="container">
+        <nav>
+            <div class="menu">
+                <a class="logo" href="#">El Medio</a>
+                <a class="item" href="index.html">Inicio</a>
+                <a class="item" href="about.html">Quienes somos</a>
+                <a class="item" href="blog.html">Blog</a>
+                <a class="item" href="sponsors.html">Pauta con Nosotros</a>
+                <a class="item" href="contact.html">Contactanos</a>
 
-            <!-- Logo -->
-            <div class="logo">
-                <img src="https://fundaciongabo.org/sites/default/files/imagenportada/2017-11/periodista-estatus-profesional-periodismo.jpg"
-                    alt="">
+                <div class="profileSession">
 
-            </div>
-            <!-- Menu -->
-            <nav id="menu">
-                <ul>
-                    <li><a href="index.html">Inicio</a> </li>
-                </ul>
-                <ul>
-                    <li><a href="about.html">Quienes somos</a></li>
-                </ul>
-                <ul>
-                    <li><a href="blog.html">Blog</a></li>
-                </ul>
-                <ul>
-                    <li><a href="sponsors.html">Pauta con nosotros</a></li>
-                </ul>
-                <ul>
-                    <li><a href="">Contactanos</a> </li>
-                </ul>
-                <div class="right-menu">
-                    <a href="login.html">Inicio de sesion</a>
-                    <a href="register.html">Registro</a>
+
+                    <div class="item has-submenu submenu-profile">
+
+
+                        <a class="linkuser">
+                            <img src="https://png.pngtree.com/png-vector/20190710/ourmid/pngtree-user-vector-avatar-png-image_1541962.jpg"
+                                class="profilepic">
+                            <div class="username">
+                                Usuario
+
+                            </div>
+                        </a>
+                        <div class="submenu">
+                            <a class="subitem" href="#">Editar perfil</a>
+                            <a class="subitem" href="#">Articulos</a>
+                        </div>
+                    </div>
                 </div>
-
-            </nav>
-
-        </div>
+                <a class="toggle" href="#">&#9776;</a>
+            </div>
+        </nav>
 
     </header>
-    <div id="search">
-        <form>
-            <input type="text" name="search" />
-            <input type="submit" name="submit" value="Buscar" class="btn-search" />
-        </form>
-    </div>
-    <main role="main">
 
+    <main role="main">
+        <div class="container">
+            <form action="#" method="post" class="form-users">
+                <label class="label-title" for="email">Email:</label>
+                <input type="text" class="field-form" placeholder="Su correo electronico" required>
+                <label class="label-title" for="password">Password:</label>
+                <input type="password" class="field-form" placeholder="Su contrasena" required>
+
+                <input type="submit" value="Iniciar sesion" class="login-submit">
+            </form>
+        </div>
     </main>
 
     <footer>
