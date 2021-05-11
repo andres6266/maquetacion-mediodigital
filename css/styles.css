@@ -587,6 +587,12 @@ main{
   font-weight: 700;
 }
 
+.description_article>.auth:hover{
+  color: var(--softOrange);
+  background-color: var(--gray);
+  border: 1px solid var(--gray);
+}
+
 .description_article>.read {
   background-color: #fab915;
   margin-top: 1em;
