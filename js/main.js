@@ -194,7 +194,7 @@ for (let i = 0; i < tablinks.length; i++) {
       tablinks[i].style.color = "#303335";
     }
 
-    tablinks[i].style.color = "#f2f2f2";
+    tablinks[i].style.color = "#ffae00";
     tablinks[i].style.background = "#303335";
     document.getElementById(tabcontent[i].id).style.display = "block"
     document.getElementById(tabcontent[i].id).style.overflow = "auto"

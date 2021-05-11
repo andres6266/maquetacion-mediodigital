@@ -134,6 +134,14 @@
     .team-container{
         width: 100%;
     }   
+    .form-users{
+        padding: 1em;
+    }
+    
+    .form-users>h2{
+        font-size: 1em;
+
+    }
 }
 
 
@@ -165,7 +173,6 @@
 }
 
 .form-users>h2{
-    font-size: 1em;
     justify-content: center;
 }
 .label-title-form{
@@ -202,9 +209,7 @@
     display: none;
 }
     
-    .form-users{
-        padding: 1em;
-    }
+    
 }
 
 
