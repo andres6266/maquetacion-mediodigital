@@ -46,14 +46,37 @@
         </nav>
 
     </header>
-    <div id="search">
-        <form>
-            <input type="text" name="search" />
-            <input type="submit" name="submit" value="Buscar" class="btn-search" />
-        </form>
-    </div>
-    <main role="main">
+    <main role="main" class="main-contact">
+        <div class="container">
+            <form action="#" method="post" class="form-users">
+                <h2>Actualizar datos de perfil</h2>
 
+                <label for="name" class="label-title-form">Nombre:</label>
+                <input type="text" placeholder="nombre" class="field-form" required value="admin">
+
+            
+
+                <label class="label-title-form" for="email">Email:</label>
+                <input type="email" class="field-form" placeholder="Su correo electronico" required value="admin@admin.com">
+
+
+                <label class="label-title-form" for="password">Cambiar contrasena:</label>
+                <input type="password" class="field-form" placeholder="Su contrasena" required>
+
+
+                <label class="label-title-form" for="password">Foto de perfil</label>
+                <input type="file" class="field-form" required>
+
+                <img src="https://png.pngtree.com/png-vector/20190710/ourmid/pngtree-user-vector-avatar-png-image_1541962.jpg" class="profile-pic">
+
+
+
+
+                <input type="submit" value="Enviar" class="form-submit">
+            </form>
+            
+
+        </div>
     </main>
 
     <footer>
@@ -71,6 +94,7 @@
         </div>
     </footer>
     <script src="js/main.js"></script>
+    </script>
 </body>
 
 </html>

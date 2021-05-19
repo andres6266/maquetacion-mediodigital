@@ -3,6 +3,9 @@
   --softOrange:#ffae00;
   --gray: #303335;
   --weightDefault:700;
+  --btn-table-show: #0052ce;
+  --btn-table-edit: rgb(7 216 19);
+  --btn-table-delete:rgb(218, 1, 1);
 }
 
 
@@ -170,8 +173,24 @@ align-self: center;
   border-bottom: 1px var(--gray) solid;
 }
 
+/* -------------  Fin Menu  ----------------------- */
+/* -------------   Menu Panel ---------------------- */
+#menu-panel{
+  justify-content: flex-end;
+
+}
+
+
+/* -------------  Fin Menu Panel ------------------- */
+
+
 /* Desktop menu */
 @media all and (min-width: 960px) {
+  #menu-panel{
+    justify-content: flex-start;
+  
+  }
+ 
   nav>.menu{
 
     background-color: var(--gray);
@@ -270,9 +289,14 @@ align-self: center;
     border: none;
   flex-shrink: 0;
   }
+
+  
 }
 
-/* -------------  Fin Menu  ----------------------- */
+
+
+
+
 
 /* Tamano minimo del main */
 main{
@@ -555,10 +579,41 @@ main{
   margin: 1em;
 }
 
+.complete-article{
+  margin: 1em;
+}
+
+.complete-article>.image-article{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.complete-article>.image-article>img{
+  width: 36em;
+  height: 22em;
+  margin: 1em;
+}
+
 .image-article>img{
   width: 15em;
   height: 12em;
 }
+
+.info-article{
+  align-self:flex-start ;
+  display: flex;
+}
+
+.info-article>.auth{
+  margin-right: 1em;
+  margin-left: 1em;
+}
+
+.complete-article>.action-blog>a{
+  align-self: flex-start;
+  border-radius: 1em;
+}
+
 
 .description_article{
   display: flex;
@@ -576,7 +631,7 @@ main{
   margin-top: 1em;
 }
 
-.description_article>.auth{
+.auth{
   width: 12em;
   border: 1px solid var(--softOrange);
   text-align: center;
@@ -587,19 +642,46 @@ main{
   font-weight: 700;
 }
 
-.description_article>.auth:hover{
+.auth:hover{
   color: var(--softOrange);
   background-color: var(--gray);
   border: 1px solid var(--gray);
 }
 
-.description_article>.read {
+.action-blog{
+  display: flex;
+  justify-content: flex-start;
+}
+.action-blog>.read {
+  color: var(--gray);
   background-color: #fab915;
-  margin-top: 1em;
+  margin:.5em;
+  text-align:center;
   width: 7em;
   padding: 10px;
   text-decoration: none;
-  color: #303335;
+  font-weight: 600;
+  cursor: pointer;
+}
+.action-blog>.update {
+  color: #f2f2f2;
+  background-color: #06ca06;
+  margin:.5em;
+  text-align:center;
+  width: 7em;
+  padding: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  cursor: pointer;
+}
+.action-blog>.delete {
+  background-color: #fa1515;
+  color: #f2f2f2;
+  margin:.5em;
+  text-align:center;
+  width: 7em;
+  padding: 10px;
+  text-decoration: none;
   font-weight: 600;
   cursor: pointer;
 }
@@ -730,7 +812,6 @@ footer{
   padding: 6px 12px;
   border: 1px solid #ccc;
   border-top: none;
-  max-height: 31em;
 }
 
 /* -------------------- Formulario de login - Registro - Contacto --------------- */
@@ -747,12 +828,14 @@ footer{
   border: 7px double var(--softOrange);
   display: flex;
   flex-flow: column;
+  align-items: center;
   padding: 5em;
   flex-wrap: wrap;
 }
 
 .label-title-form{
-  margin-top: 1em;
+  align-self: flex-start;
+  margin: 1em;
   color: #303335;
 }
 
@@ -760,7 +843,6 @@ footer{
   width: 30em;
   margin-bottom: 1em;
   padding: 1em;
-  border: 1px solid #303335;
   border-radius: .5em;
   font-size: 1em;
 }
@@ -896,4 +978,103 @@ footer{
   font-weight: 900;
   margin-left: -2em;
   margin-right: 1em;
+}
+
+
+
+/* --------------- Tablas */
+.table-content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1em;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+th{
+  background-color: var(--gray);
+  color: #f2f2f2;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: center;
+  padding: 1em;
+}
+
+.btn-table{
+  padding: 1em;
+  border: none;
+  font-weight: 800;
+  cursor: pointer;
+}
+.btn-table-show{
+   background-color: var(--btn-table-show);
+   color: #f1f1f1;
+  }
+  .btn-table-edit{
+    background-color: var(--btn-table-edit);
+  }
+  .btn-table-delete{
+  color: #f1f1f1;
+   background-color: var(--btn-table-delete);
+}
+
+
+/* --------------- Formulario edicion de usuario */
+
+.profile-pic{
+  width: 10em;
+  margin-bottom: 1em;
+  border-radius: 10em;
+}
+
+
+/* --------------- Nav tabs Role User */
+.permissions-role{
+  margin: 1em;
+}
+.category-permissions{
+  display: flex;
+  flex-wrap: wrap;
+}
+.badge{
+  padding: .4em;
+  margin: .2em;
+  border-radius: .5em;
+}
+
+.badge-primary{
+  color: #f2f2f2;
+  background-color: #005ae2;
+}
+
+.badge-success{
+  color: #f2f2f2;
+  background-color: #06ca06;
+  
+}
+
+.checkbox-permission{
+  display: flex;
+  justify-content: space-evenly;
+  margin: 1em;
+}
+
+.checkboxrole{
+  margin-right: 1em;
+}
+
+
+/* ------------------- Alerts */
+
+.alert-warning{
+  color: var(--gray);
+  background-color: #fbff00;
 }

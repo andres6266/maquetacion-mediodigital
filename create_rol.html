@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nosotros</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+    <header id="header">
+        <nav>
+            <div class="menu" id="menu-panel">
+
+
+                <a class="item" href="index.html">Web Principal</a>
+
+                <a class="item" href="index.html">Estadisticas</a>
+
+
+
+                <div class="item has-submenu">
+                    <a class="linkuser">
+                        Usuarios
+                    </a>
+                    <div class="submenu">
+                        <a class="subitem" href="users.html">Lista de usuarios</a>
+
+                    </div>
+                </div>
+
+
+                <div class="item has-submenu">
+                    <a class="linkuser">
+                        Paginas
+                    </a>
+                    <div class="submenu">
+                        <a class="subitem" href="pages.html">Lista de paginas</a>
+                        <a class="subitem" href="create_page.html">Crear pagina</a>
+                        <a class="subitem" href="socials.html">Lista de redes sociales</a>
+                        <a class="subitem" href="create_social.html">Crear red social para pagina</a>
+
+                    </div>
+                </div>
+
+
+                <div class="item has-submenu">
+                    <a class="linkuser">
+                        Roles
+                    </a>
+                    <div class="submenu">
+                        <a class="subitem" href="roles.html">Lista de roles</a>
+                        <a class="subitem" href="create_rol.html">Crear rol</a>
+
+                    </div>
+                </div>
+
+
+                <div class="item has-submenu">
+                    <a class="linkuser">
+                        Categorias
+                    </a>
+                    <div class="submenu">
+                        <a class="subitem" href="categories.html">Lista de categorias</a>
+                        <a class="subitem" href="create_category.html">Crear categoria</a>
+
+                    </div>
+                </div>
+
+
+                <div class="item has-submenu">
+                    <a class="linkuser">
+                        Permisos
+                    </a>
+                    <div class="submenu">
+                        <a class="subitem" href="permissions.html">Lista de permisos</a>
+                        <a class="subitem" href="create_permission.html">Crear permiso</a>
+
+                    </div>
+                </div>
+
+
+                <div class="item has-submenu">
+                    <a class="linkuser">
+                        Blog
+                    </a>
+                    <div class="submenu">
+                        <a class="subitem" href="articles.html">Lista de articulos</a>
+                        <a class="subitem" href="create_article.html">Crear articulo</a>
+
+                    </div>
+                </div>
+
+
+
+                <a class="toggle" href="#">&#9776;</a>
+            </div>
+        </nav>
+    </header>
+    <main role="main" class="main-contact">
+        <div class="container">
+            <form action="#" method="post" class="form-users">
+                <h2>Actualizar datos de perfil</h2>
+
+                <label for="name" class="label-title-form">Nombre:</label>
+                <input type="text" placeholder="nombre" name="name" class="field-form" required value="admin">
+
+
+
+                <label class="label-title-form" for="email">Email:</label>
+                <input type="email" class="field-form" placeholder="Su correo electronico" required name="email"
+                    value="admin@admin.com">
+
+
+                <label class="label-title-form" for="password">Cambiar contrasena:</label>
+                <input type="password" class="field-form" name="password" placeholder="Su contrasena" required>
+
+                <div class="permissions-role">
+
+                    <div class="tab">
+                        <button class="tablinks">Todos los permisos</button>
+                        <button class="tablinks">Categoria </button>
+                        <button class="tablinks">Categoria 2</button>
+                    </div>
+
+
+                    <div id="todaPalabra6" class="tabcontent">
+
+                        <div class="category-permissions">
+
+                            <div class="badge badge-primary">
+                                Categoria1
+                            </div>
+                            <span class="badge badge-success">Permiso</span>
+                            <span class="badge badge-success">Permiso</span>
+                            <span class="badge badge-success">Permiso</span>
+                            <span class="badge badge-success">Permiso</span>
+                            <span class="badge badge-success">Permiso</span>
+                            <span class="badge badge-success">Permiso</span>
+                            <span class="badge badge-success">Permiso</span>
+                        </div>
+                        <div class="category-permissions">
+
+                            <div class="badge badge-primary">
+                                Categoria2
+                            </div>
+                            <span class="badge badge-success">Permiso</span>
+                            <span class="badge badge-success">Permiso</span>
+                            <span class="badge badge-success">Permiso</span>
+                            <span class="badge badge-success">Permiso</span>
+                            <span class="badge badge-success">Permiso</span>
+                            <span class="badge badge-success">Permiso</span>
+                            <span class="badge badge-success">Permiso</span>
+                        </div>
+                    </div>
+
+                    <div id="medioNoticias" class="tabcontent">
+
+
+                        <div class="checkbox-permission">
+
+                            <input type="checkbox" class="checkboxrole" name="permissions[]">
+                            <label for="permission">
+                                Permiso Uno
+                                <em>(Lorem ipsum dolor sit amet consectetur adipisicina)</em>
+                            </label>
+                        </div>
+
+
+                        <div class="checkbox-permission">
+
+                            <input type="checkbox" class="checkboxrole">
+                            <label for="permission">
+                                Permiso Uno
+                                <em>(Lorem ipsum dolor sit amet consectetur adipisicina)</em>
+                            </label>
+                        </div>
+
+
+                        <div class="checkbox-permission">
+
+                            <input type="checkbox" class="checkboxrole">
+                            <label for="permission">
+                                Permiso Uno
+                                <em>(Lorem ipsum dolor sit amet consectetur adipisicina)</em>
+                            </label>
+                        </div>
+
+
+
+                    </div>
+
+                    <div id="todaPalabra" class="tabcontent">
+                        <div class="checkbox-permission">
+
+                            <input type="checkbox" class="checkboxrole" name="permission[]">
+                            <label for="permission">
+                                Permiso Uno
+                                <em>(Lorem ipsum dolor sit amet consectetur adipisicina)</em>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <input type="submit" value="Enviar" class="form-submit">
+            </form>
+
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="social-media">
+            <span>
+                &copy; Andres Avila
+            </span>
+            <a href="#">
+                <img src="https://i.pinimg.com/originals/3b/21/c7/3b21c7efd2ba9c119fb8d361acacc31d.png">
+            </a>
+            <a href="#">
+                <img
+                    src="https://images.vexels.com/media/users/3/137419/isolated/preview/b1a3fab214230557053ed1c4bf17b46c-logotipo-del-icono-de-twitter-by-vexels.png">
+            </a>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+    </script>
+</body>
+
+</html>
