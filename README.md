@@ -1,3 +1,3 @@
 # Maquetacion medio digital
 
-> Practica de maquetacion sobre un medio digital periodistico
+> Practica de maquetacion sobre un medio digital
